@@ -155,3 +155,9 @@ VMware 下载地址：https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_
 ​	3、删除一个文件
 
 ​			因为这个文件中保存了网卡的物理地址与网卡名的关系 会自动生成一个新的文件
+
+## 六、通过xshell 和xftp连接虚拟机
+
+![image-20191125230752175](C:\Users\98263\AppData\Roaming\Typora\typora-user-images\image-20191125230752175.png)
+
+![image-20191125230857147](C:\Users\98263\AppData\Roaming\Typora\typora-user-images\image-20191125230857147.png)
