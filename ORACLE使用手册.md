@@ -86,7 +86,7 @@ select * from ware_retail_part partition(par_04);
 
 
 ​	   
- 
+
 	3、mybatis 中配置insert规则 返回自增主键 
 	<insert id="insertItemCase"  useGeneratedKeys="true"
 	        parameterType="com.kttsoft.kpi.api.modules.base.model.ConfigItemCase">  
@@ -108,3 +108,10 @@ DROP SEQUENCE PERSON_sequence  --删除序列
 ```
 
  
+
+​	cmd 导出表
+
+```
+exp chenyu/123456@localhost/orcl
+```
+
