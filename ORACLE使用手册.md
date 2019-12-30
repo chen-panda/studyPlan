@@ -1,10 +1,21 @@
+
+
 # ORACLE 开发手册
 
 ## 一、oracle基本手册
 
+安装
 
+ https://www.cnblogs.com/gaozejie/p/9741186.html 
 
+ 注册码  
 
+```
+PLSQL Developer 12.0.7 注册码
+product code： 4vkjwhfeh3ufnqnmpr9brvcuyujrx3n3le 
+serial Number：226959 
+password: xs374ca
+```
 
 
 
@@ -113,5 +124,65 @@ DROP SEQUENCE PERSON_sequence  --删除序列
 
 ```
 exp chenyu/123456@localhost/orcl
+
+exp (用户名)/(密码)@192.168.1.119/orcl file=d:\xiangyangjixiao.dmp（文件存放地址） owner=xiangyangjixiao
+
+导出一张或几张表时
+exp zffxpg/zffxpg@localhost:1521/orcl file=D:\risk.dmp tables=(DATA_RISK_INFO1,DATA_RISK_INFO2)
 ```
+
+
+
+cmd 导入dmp文件
+
+```
+imp (用户名)/(密码)@192.168.1.119/orcl file=d:\zffxpg.dmp（文件存放地址） full=y log=exp_table.log
+
+```
+
+
+
+oracle 创建表空间
+
+```
+create tablespace ZFFXPG  
+logging  
+datafile 'E:/oracle/oracle/oradata/ORCL/ZFFXPG.dbf' 
+size 50m  
+autoextend on  
+next 50m maxsize 20480m  
+extent management local; 
+```
+
+创建用户并制定默认表空间
+
+```
+create user ZFFXPG identified by ZFFXPG  default tablespace  ZFFXPG  temporary tablespace temp;
+注解 default tablespace 默认表空间
+temporary tablespace 临时表空间（可以使用temp）
+
+```
+
+授权
+
+```
+grant connect,resource,dba to username;
+```
+
+查询该用户表空间是否切换
+
+```
+select default_tablespace from dba_users where username='ZFFXPG'
+```
+
+oracle数据库建立dblinks
+
+```
+Name : 自定义取一个名字
+UserName ： TYYW
+Password：TYYW
+Database:192.168.1.119/orcl
+```
+
+
 
