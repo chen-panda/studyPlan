@@ -184,5 +184,9 @@ Password：TYYW
 Database:192.168.1.119/orcl
 ```
 
+oracle 查看是否存在空表
 
+```
+select 'alter table '||table_name||' allocate extent;' from user_tables where num_rows=0 or num_rows is null;
+```
 
