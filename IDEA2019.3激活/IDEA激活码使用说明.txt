@@ -1,0 +1,8 @@
+选择试用30天，进入Idea
+选择Help——Edit Custom VM options
+输入-javaagent: 压缩包里jar包的绝对路径
+例如 -javaagent:D:\Java\jetbrains-agent.jar
+关闭idea，再次打开
+进入Help——Register，选择激活码激活，将txt里的激活码复制进去 
+激活成功
+亲测2019.3版本可用
